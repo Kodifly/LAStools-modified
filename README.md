@@ -4,6 +4,25 @@
 
 **Award-winning software for efficient LiDAR processing (with LASzip)**
 
+## Installation
+```shell
+git clone https://github.com/Kodifly/LAStools-modified.git
+cd LAStools-modified
+cmake -DCMAKE_BUILD_TYPE=Release CMakeLists.txt  
+cmake --build .
+sudo make install
+```
+Then it will install /usr/local/include/LASlib including LAStools header files, and a static library /usr/local/lib/LASlib/libLASlib.a
+
+## Test
+```shell
+cd LAStools-modified/LAStoolsTest
+mkdir build && cd build
+cmake ..
+make
+./lasloader /path/your_file.las
+```
+
 ## Overview
 
 Tools for processing LiDAR data files.
